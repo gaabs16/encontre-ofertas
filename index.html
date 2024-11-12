@@ -3,70 +3,174 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"  rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encontre Ofertas</title>
   </head>
   <body class="flex flex-col min-h-screen">
     <header>
-        <nav class="flex justify-between py-8 px-10 bg-black text-white">
-            <ul>
-                <li>Encontre Ofertas</li>
+        <nav class="flex justify-between py-8 px-10 bg-black fixed w-full z-10">
+            <ul class="flex gap-2">
+                <li class="text-white uppercase text-2xl">Encontre</li>
+                <li class="text-red-600 uppercase text-2xl underline">Ofertas</li>
             </ul>
-            <button>Anuncie Aqui</button>
+            <button class="bg-red-600 text-white p-2 rounded-lg">Anuncie Aqui</button>
         </nav>
         <!-- carrousel -->
-        <section class="h-80 bg-blue-500"></section>
+        <section>
+            <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-60 overflow-hidden sm:min-h-80">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/public/assets/banner1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/public/assets/banner2.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+        </section>
     </header>
     <main class="flex flex-col grow px-16 py-20 gap-10">
         <h2 class="text-3xl font-bold">Categoria</h2>
         <div class="flex flex-col gap-10">
             <nav>
                 <ul class="flex gap-10 w-full overflow-hidden">
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
-                    <li class="w-20 h-20 bg-blue-900 rounded-xl shrink-0"></li>
+                    <li class="border-solid border-2 border-yellow-400 p-4 rounded-xl shrink-0">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#EAC452"><path d="m323-245 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm-90 125 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-355Z"/></svg>
+                            <p class="text-yellow-400">Destaque</p>
+                        </a>
+                    </li>
+                    <li class="border-solid border-2 border-black p-4 rounded-xl shrink-0">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M40-120v-60h880v60H40Zm100-120q-24 0-42-18t-18-42v-480q0-24 18-42t42-18h680q24 0 42 18t18 42v480q0 24-18 42t-42 18H140Zm0-60h680v-480H140v480Zm0 0v-480 480Z"/></svg>
+                            <p class="text-black">Tecnologia</p>
+                        </a>
+                    </li>
+                    <li class="border-solid border-2 border-black p-4 rounded-xl shrink-0">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M165-480 45-688l264-152h51q16 45 45 82.5t75 37.5q47 0 76-37.5t44-82.5h51l263 153-119 207-75-41v216l-60 51v-369l113 62 59-104-188-110q-26 53-70 84t-94 31q-49 0-93.5-31T316-775L127-665l61 104 112-62v225q-15 2-30.5 6.5T240-380v-141l-75 41Zm22 291-39-46 79-67q23-19 51-29t57-10q29 0 56.5 10t50.5 29l116 99q14 12 31.5 17.5T626-180q18 0 36-5.5t32-17.5l79-69 39 47-79 67q-23 19-50.5 28.5T626-120q-29 0-57-9.5T518-158l-115-99q-14-12-32-17.5t-36-5.5q-19 0-36.5 5.5T267-257l-80 68Zm293-471Z"/></svg>
+                            <p class="text-black">Moda</p>
+                        </a>
+                    </li>
+                    <li class="border-solid border-2 border-black p-4 rounded-xl shrink-0">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M479-120 189-279v-240L40-600l439-240 441 240v317h-60v-282l-91 46v240L479-120Zm0-308 315-172-315-169-313 169 313 172Zm0 240 230-127v-168L479-360 249-485v170l230 127Zm1-240Zm-1 74Zm0 0Z"/></svg>
+                            <p class="text-black">Educação</p>
+                        </a>
+                    </li>
+                    <li class="border-solid border-2 border-black p-4 rounded-xl shrink-0">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="m550-84-42-42 142-142-382-382-142 142-42-42 56-58-56-56 85-85-42-42 42-42 43 41 84-84 56 56 58-56 42 42-142 142 382 382 142-142 42 42-56 58 56 56-86 86 42 42-42 42-42-42-84 84-56-56-58 56Z"/></svg>
+                            <p class="text-black">Esporte</p>
+                        </a>
+                    </li>
+                    <li class="border-solid border-2 border-black p-4 rounded-xl shrink-0">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M575-364q-23-52-90.5-82.5T344-477q-73 0-140.5 30.5T112-364h463ZM40-304q0-109 93-171t211-62q118 0 211 62t93 171H40Zm0 128v-60h608v60H40ZM708-40v-60h86l57-580H453l-7-60h205v-180h60v180h209l-67 640q-3.09 25.86-22.67 42.93Q810.76-40 785-40h-77Zm0-60h86-86ZM70-40q-12.75 0-21.37-8.63Q40-57.25 40-70v-30h608v30.18q0 12.82-8.62 21.32Q630.75-40 618-40H70Zm274-324Z"/></svg>
+                            <p class="text-black">Alimentação</p>
+                        </a>
+                    </li>
+                    <li class="border-solid border-2 border-black p-4 rounded-xl shrink-0">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="m388-80-20-126q-19-7-40-19t-37-25l-118 54-93-164 108-79q-2-9-2.5-20.5T185-480q0-9 .5-20.5T188-521L80-600l93-164 118 54q16-13 37-25t40-18l20-127h184l20 126q19 7 40.5 18.5T669-710l118-54 93 164-108 77q2 10 2.5 21.5t.5 21.5q0 10-.5 21t-2.5 21l108 78-93 164-118-54q-16 13-36.5 25.5T592-206L572-80H388Zm48-60h88l14-112q33-8 62.5-25t53.5-41l106 46 40-72-94-69q4-17 6.5-33.5T715-480q0-17-2-33.5t-7-33.5l94-69-40-72-106 46q-23-26-52-43.5T538-708l-14-112h-88l-14 112q-34 7-63.5 24T306-642l-106-46-40 72 94 69q-4 17-6.5 33.5T245-480q0 17 2.5 33.5T254-413l-94 69 40 72 106-46q24 24 53.5 41t62.5 25l14 112Zm44-210q54 0 92-38t38-92q0-54-38-92t-92-38q-54 0-92 38t-38 92q0 54 38 92t92 38Zm0-130Z"/></svg>
+                            <p class="text-black">Serviço</p>
+                        </a>
+                    </li>
+                    <li class="border-solid border-2 border-black p-4 rounded-xl shrink-0">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M80-201v-60q35-4 56.5-21.5T206-300q51 0 76 19.5t61 19.5q37 0 63-19.5t74-19.5q51 0 75.5 19.5T618-261q35 0 60-19.5t76-19.5q48 0 69.5 17.5T880-261v60q-39 0-67-19.5T753-240q-37 0-62 19.5T617-201q-50 0-74.5-19.5T480-240q-37 0-61.5 19.5T344-201q-50 0-74.5-19.5T207-240q-32 0-59 19.5T80-201Zm150-159q-22 0-42-8t-36-24l-48-48 42-42 48 47q8 8 17 11.5t19 3.5h60v-186l-61 44-35-48 286-210 286 210-35 49-61-45v186h60q11 0 19.5-3.5T766-435l48-47 42 42-48 48q-16 16-36 24t-42 8H230Zm120-60h100v-80h60v80h100v-230l-130-95-130 95v230Zm0 0h260-260Z"/></svg>
+                            <p class="text-black">Lazer</p>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <section class="grid grid-cols-3 gap-x-16 gap-y-28">
-                <div class="w-full h-80 bg-red-600 rounded-xl"></div>
-                <div class="w-full h-80 bg-red-600 rounded-xl"></div>
-                <div class="w-full h-80 bg-red-600 rounded-xl"></div>
-                <div class="w-full h-80 bg-red-600 rounded-xl"></div>
-                <div class="w-full h-80 bg-red-600 rounded-xl"></div>
-                <div class="w-full h-80 bg-red-600 rounded-xl"></div>
+                <div class="w-full h-full bg-yellow-300 rounded-xl">
+                    <img class="w-full" src="/public/assets/woman.png" alt="">
+                    <h2 class="font-bold flex justify-center">Promoção No Eauty Studio</h2>
+                    <p class="flex justify-end">Expira em: 2 dias</p>
+                </div>
+                <div class="w-full h-full bg-yellow-300 rounded-xl">
+                    <img class="w-full" src="/public/assets/woman.png" alt="">
+                    <h2 class="font-bold flex justify-center">Promoção No Eauty Studio</h2>
+                    <p class="flex justify-end">Expira em: 2 dias</p>
+                </div>
+                <div class="w-full h-full bg-yellow-300 rounded-xl">
+                    <img class="w-full" src="/public/assets/woman.png" alt="">
+                    <h2 class="font-bold flex justify-center">Promoção No Eauty Studio</h2>
+                    <p class="flex justify-end">Expira em: 2 dias</p>
+                </div>
+                <div class="w-full h-full bg-yellow-300 rounded-xl">
+                    <img class="w-full" src="/public/assets/woman.png" alt="">
+                    <h2 class="font-bold flex justify-center">Promoção No Eauty Studio</h2>
+                    <p class="flex justify-end">Expira em: 2 dias</p>
+                </div>
+                <div class="w-full h-full bg-yellow-300 rounded-xl">
+                    <img class="w-full" src="/public/assets/woman.png" alt="">
+                    <h2 class="font-bold flex justify-center">Promoção No Eauty Studio</h2>
+                    <p class="flex justify-end">Expira em: 2 dias</p>
+                </div>
+                <div class="w-full h-full bg-yellow-300 rounded-xl">
+                    <img class="w-full" src="/public/assets/woman.png" alt="">
+                    <h2 class="font-bold flex justify-center">Promoção No Eauty Studio</h2>
+                    <p class="flex justify-end">Expira em: 2 dias</p>
+                </div>
             </section>
         </div>
     </main>
     <footer class="flex flex-col">
-        <div class="flex px-16 py-20 gap-20 bg-blue-800 jus">
+        <div class="flex px-16 py-20 gap-20 bg-slate-800">
             <div class="flex flex-col gap-2">
-                <h2 class="text-2xl font-bold">Preencha o formulário!</h2>
-                <p>Receba dicas, ofertas exclusivas e novidades, tudo em primeira mão!</p>
+                <h2 class="text-2xl font-bold text-white uppercase">Preencha o formulário!</h2>
+                <p class="text-white">Receba dicas, ofertas exclusivas e novidades, tudo em primeira mão!</p>
             </div>
-            <form class="flex flex-col gap-5" action="">
-                <label for="">
-                    <input type="text">
-                </label>
-                <label for="">
-                    <input type="text">
-                </label>
-                <label for="">
-                    <input type="text">
-                </label>
-                <input class="bg-yellow-400" type="submit" value="Seja VIP">
-            </form>
+            <form action="" method="post" class="flex flex-col gap-5 w-1/5">
+                <div>
+                  <input class="rounded-xl w-72" type="text" id="nome" name="usuario_nome" placeholder="Nome" required/>
+                </div>
+                <div>
+                    <input class="rounded-xl w-72" type="tel" id="number" name="usuario_number" placeholder="Whatsapp" required/>
+                </div>
+                <div>
+                  <input class="rounded-xl w-72" type="email" id="email" name="usuario_email" placeholder="E-mail" required/>
+                </div>
+                <div class="bg-yellow-400 rounded-xl font-bold text-lg w-72 flex justify-center">
+                  <button class="flex" type="submit">Seja VIP</button>
+                </div>
+              </form>                           
             <div class="flex gap-4">
-                <a class="w-20 h-20 bg-yellow-900 rounded-xl shrink-0"></a>
-                <a class="w-20 h-20 bg-yellow-900 rounded-xl shrink-0"></a>
+                <a href="" class="w-20 h-20 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 256 256"><g fill="none"><rect width="256" height="256" fill="url(#skillIconsInstagram0)" rx="60"/><rect width="256" height="256" fill="url(#skillIconsInstagram1)" rx="60"/><path fill="#fff" d="M128.009 28c-27.158 0-30.567.119-41.233.604c-10.646.488-17.913 2.173-24.271 4.646c-6.578 2.554-12.157 5.971-17.715 11.531c-5.563 5.559-8.98 11.138-11.542 17.713c-2.48 6.36-4.167 13.63-4.646 24.271c-.477 10.667-.602 14.077-.602 41.236s.12 30.557.604 41.223c.49 10.646 2.175 17.913 4.646 24.271c2.556 6.578 5.973 12.157 11.533 17.715c5.557 5.563 11.136 8.988 17.709 11.542c6.363 2.473 13.631 4.158 24.275 4.646c10.667.485 14.073.604 41.23.604c27.161 0 30.559-.119 41.225-.604c10.646-.488 17.921-2.173 24.284-4.646c6.575-2.554 12.146-5.979 17.702-11.542c5.563-5.558 8.979-11.137 11.542-17.712c2.458-6.361 4.146-13.63 4.646-24.272c.479-10.666.604-14.066.604-41.225s-.125-30.567-.604-41.234c-.5-10.646-2.188-17.912-4.646-24.27c-2.563-6.578-5.979-12.157-11.542-17.716c-5.562-5.562-11.125-8.979-17.708-11.53c-6.375-2.474-13.646-4.16-24.292-4.647c-10.667-.485-14.063-.604-41.23-.604zm-8.971 18.021c2.663-.004 5.634 0 8.971 0c26.701 0 29.865.096 40.409.575c9.75.446 15.042 2.075 18.567 3.444c4.667 1.812 7.994 3.979 11.492 7.48c3.5 3.5 5.666 6.833 7.483 11.5c1.369 3.52 3 8.812 3.444 18.562c.479 10.542.583 13.708.583 40.396s-.104 29.855-.583 40.396c-.446 9.75-2.075 15.042-3.444 18.563c-1.812 4.667-3.983 7.99-7.483 11.488c-3.5 3.5-6.823 5.666-11.492 7.479c-3.521 1.375-8.817 3-18.567 3.446c-10.542.479-13.708.583-40.409.583c-26.702 0-29.867-.104-40.408-.583c-9.75-.45-15.042-2.079-18.57-3.448c-4.666-1.813-8-3.979-11.5-7.479s-5.666-6.825-7.483-11.494c-1.369-3.521-3-8.813-3.444-18.563c-.479-10.542-.575-13.708-.575-40.413s.096-29.854.575-40.396c.446-9.75 2.075-15.042 3.444-18.567c1.813-4.667 3.983-8 7.484-11.5s6.833-5.667 11.5-7.483c3.525-1.375 8.819-3 18.569-3.448c9.225-.417 12.8-.542 31.437-.563zm62.351 16.604c-6.625 0-12 5.37-12 11.996c0 6.625 5.375 12 12 12s12-5.375 12-12s-5.375-12-12-12zm-53.38 14.021c-28.36 0-51.354 22.994-51.354 51.355s22.994 51.344 51.354 51.344c28.361 0 51.347-22.983 51.347-51.344c0-28.36-22.988-51.355-51.349-51.355zm0 18.021c18.409 0 33.334 14.923 33.334 33.334c0 18.409-14.925 33.334-33.334 33.334s-33.333-14.925-33.333-33.334c0-18.411 14.923-33.334 33.333-33.334"/><defs><radialGradient id="skillIconsInstagram0" cx="0" cy="0" r="1" gradientTransform="matrix(0 -253.715 235.975 0 68 275.717)" gradientUnits="userSpaceOnUse"><stop stop-color="#fd5"/><stop offset=".1" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></radialGradient><radialGradient id="skillIconsInstagram1" cx="0" cy="0" r="1" gradientTransform="matrix(22.25952 111.2061 -458.39518 91.75449 -42.881 18.441)" gradientUnits="userSpaceOnUse"><stop stop-color="#3771c8"/><stop offset=".128" stop-color="#3771c8"/><stop offset="1" stop-color="#60f" stop-opacity="0"/></radialGradient></defs></g></svg>
+                </a>
+                <a href="" class="w-20 h-20 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 256 258"><defs><linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1faf38"/><stop offset="100%" stop-color="#60d669"/></linearGradient><linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#f9f9f9"/><stop offset="100%" stop-color="#fff"/></linearGradient></defs><path fill="url(#logosWhatsappIcon0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/><path fill="url(#logosWhatsappIcon1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"/><path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/></svg>
+                </a>
             </div>
         </div>
         <div class="flex justify-center py-8 px-10 bg-black text-white">
@@ -74,5 +178,7 @@
         </div>
     </footer>
     <script type="module" src="./src/main.js"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   </body>
 </html>
